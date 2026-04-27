@@ -1,0 +1,9 @@
+Common network connection types include:
+
+Ethernet: Wired connections using cables. [Wire:(Category 5,5e,6 cable) With Socket(RJ45)]
+
+Wi-Fi: Wireless connections using radio waves.
+Cellular: Mobile data connections (3G, 4G, 5G).
+DSL: Digital Subscriber Line, using phone lines.
+Fiber Optic: High-speed connections using light signals.
+Satellite: Internet access via satellite dish.
