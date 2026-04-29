@@ -1,7 +1,18 @@
 .....................................................................
                       Name For Router MikroTik
 .....................................................................
-[Menu] system -> identity --- identity : Yasin.Network
-
 /system identity set name=Yasin.Network
+.....................................................................
+ Blocking international internet access for users within the network
+.....................................................................
+1. 
+/ip firewall filter
+add chain=forward action=accept in-interface=bridge-local out-interface=bridge-local \
+    comment="Allow traffic within the local network"
+2.
+/ip firewall filter
+add chain=forward action=drop connection-state=!established,!related in-interface=bridge-local out-interface=ether1-isp \
+    comment="Block all outbound internet access for local network users"
+
+
 
