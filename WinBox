@@ -1,0 +1,7 @@
+.....................................................................
+                      Name For Router MikroTik
+.....................................................................
+[Menu] system -> identity --- identity : Yasin.Network
+
+/system identity set name=Yasin.Network
+
