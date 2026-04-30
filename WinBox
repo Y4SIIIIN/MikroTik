@@ -13,6 +13,11 @@ add chain=forward action=accept in-interface=bridge-local out-interface=bridge-l
 /ip firewall filter
 add chain=forward action=drop connection-state=!established,!related in-interface=bridge-local out-interface=ether1-isp \
     comment="Block all outbound internet access for local network users"
+.....................................................................
+                     PPPoE DNS [ADSL USER]
+.....................................................................
+/ppp profile
+set [find name="TCI"] dns-server=5.200.200.200
 
 
 
