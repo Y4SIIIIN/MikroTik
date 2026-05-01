@@ -20,6 +20,7 @@ add chain=forward action=drop connection-state=!established,!related in-interfac
 set [find name="TCI"] dns-server=5.200.200.200
 
 /ip pool add name=PPPOE-Server ranges=192.168.7.2-192.168.7.254
+/ip firewall nat add chain=srcnat src-address=192.168.7.0/24 action=masquerade
 
 
 
