@@ -19,5 +19,7 @@ add chain=forward action=drop connection-state=!established,!related in-interfac
 /ppp profile
 set [find name="TCI"] dns-server=5.200.200.200
 
+/ip pool add name=PPPOE-Server ranges=192.168.7.2-192.168.7.254
+
 
 
