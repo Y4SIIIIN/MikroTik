@@ -19,9 +19,19 @@ add chain=forward action=drop connection-state=!established,!related in-interfac
 /ppp profile
 set [find name="TCI"] dns-server=5.200.200.200
 
-/ip pool add name=PPPOE-Server ranges=192.168.7.2-192.168.7.254
+.....................................................................
+                             PPPOE-Server
+.....................................................................
+
 /ip firewall nat add chain=srcnat src-address=192.168.7.0/24 action=masquerade
-/ip ppp profile add name=PPPOE-Server local-address=192.168.7.1 remote-address=PPPOE-Server dns-server=8.8.8.8,4.2.2.4
+/ip ppp profile 
+add name=PPPOE-Server local-address=192.168.7.1 remote-address=PPPOE-Server dns-server=8.8.8.8,4.2.2.4
+/ip profile
+add name="PPPOE-Server" local-address=192.168.7.1 remote-address="IP Pool" dns-server="8.8.8.8,4.2.2.4" change-tcp-mss=default use-upnp=default
+/ip pool 
+add name=PPPOE-Server ranges=192.168.7.2-192.168.7.254
+/ip ppp secrets
+add name=admin password=admin service=pppoe profile=PPPOE-Server
 
 
 
