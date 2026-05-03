@@ -44,4 +44,6 @@ RADIUS utilizes encryption to safeguard sensitive information such as usernames 
 
 /radius
 add address=127.0.0.1 authentication-port=1812 accounting-port=1813 secret=******* service=ppp timeout=300ms
+/radius
+set accept-incoming-radius=yes incoming-radius-port=1700
 
