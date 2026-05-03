@@ -33,5 +33,8 @@ add name=PPPOE-Server ranges=192.168.7.2-192.168.7.254
 /ip ppp secrets
 add name=admin password=admin service=pppoe profile=PPPOE-Server
 
+/interface pppoe-server server
+set service-name="PPPOE-Server" interface=ethernet1 max-mtu=1410 max-mru=1410 mrru=0 keepalive-timeout=10 default-profile="PPPOE-Server" one-session-per-host=yes authentication=mschap2
+
 
 
