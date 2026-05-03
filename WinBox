@@ -36,5 +36,9 @@ add name=admin password=admin service=pppoe profile=PPPOE-Server
 /interface pppoe-server server
 set service-name="PPPOE-Server" interface=ethernet1 max-mtu=1410 max-mru=1410 mrru=0 keepalive-timeout=10 default-profile="PPPOE-Server" one-session-per-host=yes authentication=mschap2
 
-
+RADIUS (Remote Authentication Dial-In User Service) is a networking protocol designed for centralized access management and accounting of users connecting to or using a network service. 
+It provides Authentication, Authorization, and Accounting (AAA) services, enabling network administrators to control user access to various network resources. 
+This process is centrally managed, and a key feature of RADIUS is its ability to handle user access to diverse network environments, including VPNs, Wi-Fi, and cloud services, through a single, central server.
+The benefits of employing a RADIUS server encompass robust security, scalability, and granular monitoring of user activities. 
+RADIUS utilizes encryption to safeguard sensitive information such as usernames and passwords, establishing it as a foundational standard in security systems.
 
