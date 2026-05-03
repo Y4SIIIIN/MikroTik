@@ -42,3 +42,6 @@ This process is centrally managed, and a key feature of RADIUS is its ability to
 The benefits of employing a RADIUS server encompass robust security, scalability, and granular monitoring of user activities. 
 RADIUS utilizes encryption to safeguard sensitive information such as usernames and passwords, establishing it as a foundational standard in security systems.
 
+/radius
+add address=127.0.0.1 authentication-port=1812 accounting-port=1813 secret=******* service=ppp timeout=300ms
+
