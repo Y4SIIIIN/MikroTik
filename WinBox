@@ -5,6 +5,9 @@
 .....................................................................
  Blocking international internet access for users within the network
 .....................................................................
+/interface ethernet
+set [ find name="ether1" ] new-name="Ether 1.ADSL"
+.....................................................................
 1. 
 /ip firewall filter
 add chain=forward action=accept in-interface=bridge-local out-interface=bridge-local \
