@@ -7,6 +7,8 @@
 .....................................................................
 /interface ethernet
 set [ find name="ether1" ] new-name="Ether 1.ADSL"
+/interface ethernet
+set [ find name="ether2" ] new-name="Ether 2.Wire"
 /ip address
 add address=192.168.10.2/24 interface="Ether 1.ADSL"
 .....................................................................
