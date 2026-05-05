@@ -7,6 +7,8 @@
 .....................................................................
 /interface ethernet
 set [ find name="ether1" ] new-name="Ether 1.ADSL"
+/ip address
+add address=192.168.10.2/24 interface="Ether 1.ADSL"
 .....................................................................
 1. 
 /ip firewall filter
