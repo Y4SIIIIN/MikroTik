@@ -14,6 +14,8 @@ add address=192.168.10.2/24 interface="Ether 1.ADSL"
 /ip address
 add address=192.168.20.1/24 interface="Ether 2.Wire"
 .....................................................................
+Bridge Mode
+.....................................................................
 1. 
 /ip firewall filter
 add chain=forward action=accept in-interface=bridge-local out-interface=bridge-local \
