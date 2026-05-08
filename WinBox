@@ -67,3 +67,5 @@ add address=127.0.0.1 authentication-port=1812 accounting-port=1813 secret=*****
 /radius
 set accept-incoming-radius=yes incoming-radius-port=1700
 
+/interface pppoe-client add name=ADSL password=********* service=pppoe user=********* interface=ether1.adsl add-default-route=yes default-route-distance=1 disabled=no
+
