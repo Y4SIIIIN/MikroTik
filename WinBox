@@ -7,10 +7,19 @@
 .....................................................................
 /interface ethernet
 set [ find name="ether1" ] new-name="Ether 1.ADSL"
-/interface ethernet
-set [ find name="ether2" ] new-name="Ether 2.Wire"
+
 /ip address
 add address=192.168.10.2/24 interface="Ether 1.ADSL"
+
+SNR Margin (Signal-to-Noise Ratio Margin) in ADSL modems indicates the distance between the data signal and the background noise. The higher this value, the more stable and faster your ADSL connection will be.
+
+*   **Why it's important:** A low SNR Margin indicates excessive noise or a weak signal, which can lead to internet disconnections, reduced speed, and data transmission errors.
+*   **Typical values:** A good SNR Margin is generally considered to be above 6 decibels (dB), but 10 dB or more is ideal. Values below 6 dB may be problematic.
+*   **Troubleshooting:** If your SNR Margin is low, you can address the issue by checking your phone wiring, removing splitters, or contacting your internet service provider.
+.....................................................................
+/interface ethernet
+set [ find name="ether2" ] new-name="Ether 2.Wire"
+
 /ip address
 add address=192.168.20.1/24 interface="Ether 2.Wire"
 .....................................................................
